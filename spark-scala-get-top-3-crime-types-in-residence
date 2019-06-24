@@ -18,6 +18,8 @@ val crimeCountForResidence = sc.parallelize(crimeDataWithoutHeader.
   map(rec => (rec._2, rec._1)).
   sortByKey(false).
   take(3))
+  
+//We can use takeOrdered versus sortByKey
 
 crimeCountForResidence.
   map(rec => (rec._2, rec._1)).
